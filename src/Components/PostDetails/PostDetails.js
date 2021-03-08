@@ -12,7 +12,7 @@ const PostDetails = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setPost(data))
-    },[])
+    },[postId])
 
     useEffect(() =>
     {
@@ -20,7 +20,7 @@ const PostDetails = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setComments(data))
-    },[])
+    },[postId])
     return (
         <div>
             <h2>This is post details Id:{postId}</h2>
